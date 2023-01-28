@@ -82,10 +82,13 @@ params:
       url: "www.linkedin.com/in/namkyupark1999"
     - name: github
       url: "https://github.com/namkyu1999"
+    - name: medium
+      url: "https://medium.com/@loyle"
     - name: instagram
       url: "https://www.instagram.com/nam_9yu/"
     - name: email
       url: "mailto:lak9348@gmail.com"
+
 
   analytics:
     google:
@@ -117,18 +120,23 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - name: categories
+      url: categories
+      weight: 5
+    - name: Archive
+      url: archives
+      weight: 10
+    - name: Search
+      url: search/
       weight: 10
     - identifier: tags
       name: tags
       url: /tags/
-      weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
-      weight: 30
+      weight: 10
+#    - identifier: example
+#      name: example.org
+#      url: https://example.org
+#      weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
