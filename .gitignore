@@ -224,6 +224,7 @@ Temporary Items
 # that are supposed to be shared within teams.
 
 .idea/*
+public/
 
 !.idea/codeStyles
 !.idea/runConfigurations
