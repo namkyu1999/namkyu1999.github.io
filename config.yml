@@ -1,4 +1,4 @@
-baseURL: https://namkyu1999.github.io/
+baseURL: "https://namkyu1999.github.io/"
 languageCode: ko-kr
 title: 밑바닥부터 만드는 __
 paginate: 5
