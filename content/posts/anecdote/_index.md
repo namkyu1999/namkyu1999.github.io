@@ -1,5 +1,5 @@
 ---
-title: PaperMod
-summary: Contains posts related to `PaperMod`
-description: Contains posts related to PaperMod
+title: anecdote
+summary: Contains posts related to `anecdote`
+description: Contains posts related to anecdote
 ---

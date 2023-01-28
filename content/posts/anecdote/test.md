@@ -1,12 +1,12 @@
 ---
-title: "FAQs"
+title: "anecdote"
 summary: Frequently Asked Questions
 date: 2021-01-20
-aliases: ["/papermod-how-to-guide"]
-tags: ["PaperMod"]
+aliases: ["/test"]
+tags: ["anecdote"]
 author: "Aditya Telange"
-draft: true
-aliases: [/posts/papermod/papermod-how-to]
+draft: false
+aliases: [/posts/anecdote/test.md]
 weight: 3
 ---
 
