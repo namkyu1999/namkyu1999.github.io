@@ -36,7 +36,7 @@ categories: ["밑바닥부터 구현하는 리눅스 커맨드 라인"]
 
 대부분의 기본 명령어 들은 3번째에 해당합니다. 예컨대 ls 명령어의 경우 $PATH 중 /bin 디렉토리에 실행 가능한 파일 형태로 존재합니다.(필자는 mac을 사용중입니다)
 </br></br>
-![shell 1](../../../assets/posts/from-scratch/shell1.png)
+![shell 1](https://raw.githubusercontent.com/namkyu1999/namkyu1999.github.io/main/assets/posts/from-scratch/shell1.png)
 </br></br>
 리눅스 커맨드라인이 어떻게 동작 하는지 더 잘 알고 싶으신 분들은 'How Does the Shell Command ls Work?'[[2]](https://medium.com/@bdov_/what-happens-when-you-type-ls-c-in-the-shell-93327856ee9c)을 참고하시기 바랍니다.
 
@@ -62,7 +62,7 @@ grep 명령어 중 대표적으로 사용되는 몇가지를 구현해 보겠습
 ```
 아래는 해당 커맨드들을 사용한 예제입니다.
 </br></br>
-![shell 2](../../../assets/posts/from-scratch/shell2.png)
+![shell 2](https://raw.githubusercontent.com/namkyu1999/namkyu1999.github.io/main/assets/posts/from-scratch/shell2.png)
 
 저희가 만드는 grep을 gorep이라 칭하겠습니다. 모든 소스코드는 해당 링크에 있습니다. [[5]](https://github.com/namkyu1999/gorep)
 
@@ -70,7 +70,7 @@ grep 명령어 중 대표적으로 사용되는 몇가지를 구현해 보겠습
 
 위 요건들을 충족하기 위해 다음과 같은 플로우 차트를 구성하였습니다. 최소 요건을 구현한 것이므로 실제 grep 구현과는 차이가 있을 수 있습니다.
 </br></br>
-![gorep flow chart](../../../assets/posts/from-scratch/gorep-flow-chart.png)
+![gorep flow chart](https://raw.githubusercontent.com/namkyu1999/namkyu1999.github.io/main/assets/posts/from-scratch/gorep-flow-chart.png)
 </br></br>
 
 ## 구현
@@ -290,19 +290,27 @@ func searchCount(filename, pattern string, printPrefix bool) {
 </br></br>
 아래와 같이 몇가지 명령어를 실행 하였고 모두 정상 작동이 되는 것을 확인하였습니다.
 </br></br>
-![shell 3](../../../assets/posts/from-scratch/shell3.png)
+![shell 3](https://raw.githubusercontent.com/namkyu1999/namkyu1999.github.io/main/assets/posts/from-scratch/shell3.png)
 </br></br>
 
 해당 실행 파일을 $PATH 하위에 두거나 현재 디렉토리를 $PATH에 추가하면 ./ 없이 명령어 처럼 이용 가능합니다. </br>
 이번 포스트에서는 리눅스 커맨드라인이 어떻게 동작하는지 살펴보고 grep을 간단하게 구현해보는 시간을 가져보았습니다. 다음 포스트 에서는 좀더 빠른 실행 속도를 위해 동시성 프로그래밍을 사용하여 코드를 리팩토링 해보겠습니다.
 
 ## reference
-[1] [Shell Builtin Commands](https://www.gnu.org/software/bash/manual/html_node/Shell-Builtin-Commands.html) </br>
-[2] [How Does the Shell Command ls Work?](https://medium.com/@bdov_/what-happens-when-you-type-ls-c-in-the-shell-93327856ee9c) </br>
-[3] [Boyer–Moore string-search algorithm implementations](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm#Implementations) </br>
-[4] [Boyer-Moore string-search alogrithm in golang](https://go.dev/src/strings/search.go) </br>
-[5] [gorep github 주소](https://github.com/namkyu1999/gorep) </br>
-[6] [golang project layout](https://github.com/golang-standards/project-layout) </br>
-[7] [exported names](https://go.dev/tour/basics/3) </br>
-[8] [pass value instead of pointer](https://github.com/golang/go/wiki/CodeReviewComments#pass-values) </br>
-[9] [러닝 Go](https://product.kyobobook.co.kr/detail/S000001810487) </br>
+[1] [Shell Builtin Commands](https://www.gnu.org/software/bash/manual/html_node/Shell-Builtin-Commands.html)
+
+[2] [How Does the Shell Command ls Work?](https://medium.com/@bdov_/what-happens-when-you-type-ls-c-in-the-shell-93327856ee9c)
+
+[3] [Boyer–Moore string-search algorithm implementations](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm#Implementations)
+
+[4] [Boyer-Moore string-search alogrithm in golang](https://go.dev/src/strings/search.go)
+
+[5] [gorep github 주소](https://github.com/namkyu1999/gorep)
+
+[6] [golang project layout](https://github.com/golang-standards/project-layout)
+
+[7] [exported names](https://go.dev/tour/basics/3)
+
+[8] [pass value instead of pointer](https://github.com/golang/go/wiki/CodeReviewComments#pass-values)
+
+[9] [러닝 Go](https://product.kyobobook.co.kr/detail/S000001810487)
