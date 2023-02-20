@@ -19,10 +19,10 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: 밑바닥부터 만드는 __
   description: "소프트웨어를 밑바닥부터 구현합니다"
-  keywords: ["밑바닥부터", "구현하는", "구현", "쿠버네티스"]
+  keywords: ["밑바닥부터", "만드는", "구현", "쿠버네티스", "go", "golang", "고언어"]
   author: Namkyu Park
   # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  images: ["cover.png"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -79,7 +79,7 @@ params:
 
   socialIcons:
     - name: linkedIn
-      url: "www.linkedin.com/in/namkyupark1999"
+      url: "https://www.linkedin.com/in/namkyupark1999"
     - name: github
       url: "https://github.com/namkyu1999"
     - name: medium
