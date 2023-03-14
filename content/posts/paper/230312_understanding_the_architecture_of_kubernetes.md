@@ -20,7 +20,7 @@ categories: ["논문 요약"]
 
 아래의 그림은 오늘 우리가 살펴볼 쿠버네티스 아키텍처의 큰그림입니다. 화살표가 무엇을 의미하는지, API 서버가 무엇인지, Kubelet에서 API 서버로 향하는 라인이 무엇인지, 컨트롤 플레인(Control plane)과 워커 노드(worker node)간의 차이점이 무엇인지, 컨트롤 플레인의 존재이유가 무엇인지 등 수많은 질문들에 대한 답을 이 포스트를 통해 알아가시기 바랍니다.
 
-![arch_k8s_1](../../../assets/posts/paper/arch_k8s_1.avif)
+![arch_k8s_1](https://raw.githubusercontent.com/namkyu1999/namkyu1999.github.io/main/assets/posts/paper/arch_k8s_1.avif)
 
 본론으로 들어가기에 앞서, 쿠버네티스 생태계에서 자주 쓰이는 용어를 먼저 짚고 넘어가겠습니다.
 1. 노드(Node): 쿠버네티스에서 노드는 쿠버네티스 클러스터에 존재하는 하나의 머신(컴퓨터)를 의미합니다. 프로덕션 환경에서 노드는 주로 데이터센터에 존재하는 물리적인 머신이나 클라우드에서 호스트되는 가상 머신이 될 수 있습니다.
@@ -32,7 +32,7 @@ categories: ["논문 요약"]
 
 본격적으로 쿠버네티스의 아키텍처를 이해해보겠습니다.
 
-![arch_k8s_3](../../../assets/posts/paper/arch_k8s_3.png)
+![arch_k8s_3](https://raw.githubusercontent.com/namkyu1999/namkyu1999.github.io/main/assets/posts/paper/arch_k8s_3.png)
 
 위 이미지를 자세히 살펴보겠습니다. 우리는 3개의 노드(1개의 컨트롤 플레인 노드 & 2개의 워커 노드)를 하나의 쿠버네티스 클러스터로 묶었습니다. 이 숫자는 고정된 것이 아니며 요구 사항에 따라 자유롭게 조정할 수 있습니다.
 
@@ -84,7 +84,7 @@ categories: ["논문 요약"]
     - containerd
     - Docker
     - Mirantis Container Runtime
-    ![arch_k8s_4](../../../assets/posts/paper/arch_k8s_4.avif)
+    ![arch_k8s_4](https://raw.githubusercontent.com/namkyu1999/namkyu1999.github.io/main/assets/posts/paper/arch_k8s_4.avif)
 2. **Kubelet**: 컨테이너 런타임과 동일하게 kubelet 또한 컨트롤 플레인 노드와 워커 노드 모두에 존재합니다. 워커노드에 파드를 실행하기 위해, 파드를 실행과 관련하여 컨트롤 플레인 노드와 소통하는 컴포넌트가 존재해야 합니다. kubelet은 이 역할을 수행합니다. 각 노드에 존재한 kubelet은 control plane 노드와 상호작용 하며 파드를 실행하기 위해 API server의 명령을 기다립니다. API server로부터 kubelet이 메시지를 수신한 이후, Kubelet은 해당 노드에 존재하는 컨테이너 런타임과 플러그인 기반 인터페이스(CRI shim)를 통해 상호작용합니다. 이후 파드가 실행됩니다.
 
 지금 까지 배웠던 것들을 통해 파드가 실행되는 과정을 다시한번 살펴보겠습니다.
@@ -101,7 +101,7 @@ categories: ["논문 요약"]
 - API server는 해당 노드에 존재하는 kubelet에 파드를 실행하도록 할당합니다.
 - kubelet은 해당 노드에 있는 컨테이너 런타임과 CRI shim를 통해 상호작용합니다. 그리고 컨테이너 런타임에서 해당 파드를 실행시킵니다. 파드가 실행되는 동안, 컨트롤러 매니저는 클러스터의 실제 상태와 desired 상태가 일치하는지 계속해서 체크합니다. 
 
-    ![arch_k8s_5](../../../assets/posts/paper/arch_k8s_5.avif)
+    ![arch_k8s_5](https://raw.githubusercontent.com/namkyu1999/namkyu1999.github.io/main/assets/posts/paper/arch_k8s_5.avif)
 
 ---
 
